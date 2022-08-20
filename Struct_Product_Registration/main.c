@@ -1,14 +1,14 @@
 /*
-    Desenvolva um programa, no qual È necess·rio armazenar o
+    Desenvolva um programa, no qual √© necess√°rio armazenar o
     produto de uma loja de esporte. O produto tem as seguintes
-    caracterÌsticas: cÛdigo (inteiro), descricao (texto), preco
-    (float), promocao (sim ou n„o).
+    caracter√≠sticas: c√≥digo (inteiro), descricao (texto), preco
+    (float), promocao (sim ou n√£o).
     Para isso, crie um tipo struct chamado TipoProduto para
     guardar todos os campos de um produto.
-    Crie uma vari·vel denominada produto do tipo TipoProduto.
-    Solicite ao usu·rio que cadastre os valores na vari·vel
+    Crie uma vari√°vel denominada produto do tipo TipoProduto.
+    Solicite ao usu√°rio que cadastre os valores na vari√°vel
     produto.
-    Mostre na tela os valores cadastrados pelo usu·rio.
+    Mostre na tela os valores cadastrados pelo usu√°rio.
 */
 
 #include <stdio.h>
@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
     int qtd = 0, i = 0;
 
     printf("Cadastro de Produtos: \n");
-    printf("Quantos produtos ser„o cadastrados? \n");
+    printf("Quantos produtos ser√£o cadastrados? \n");
     scanf("%d", &qtd);
     
     TipoProduto produto[qtd];
@@ -38,17 +38,17 @@ int main(int argc, char const *argv[])
     for (i = 0; i < qtd; i++)
     {
         
-        printf("Informe o cÛdigo do produto %d:\n", i+1);
+        printf("Informe o c√≥digo do produto %d:\n", i+1);
         scanf("%d", &produto[i].cod);
 
-        printf("Informe a descriÁ„o do produto %d:\n", i+1);
+        printf("Informe a descri√ß√£o do produto %d:\n", i+1);
         fflush(stdin);
         scanf("%[^\n]", &produto[i].desc);
 
-        printf("Informe o preÁo do produto %d:\n", i+1);
+        printf("Informe o pre√ßo do produto %d:\n", i+1);
         scanf("%f", &produto[i].preco);
 
-        printf("O produto %d est· em promoÁ„o ? (S/N) :\n", i+1);
+        printf("O produto %d est√° em promo√ß√£o ? (S/N) :\n", i+1);
         fflush(stdin);
         scanf("%[^\n]", &produto[i].promo);
      
@@ -60,13 +60,11 @@ int main(int argc, char const *argv[])
 
     for (i = 0; i < qtd; i++)
     {
-        
-
         printf("Cadastro %d: \n", i+1);
-        printf("CÛdigo: %d \n", produto[i].cod);
-        printf("DescriÁ„o: %s \n", produto[i].desc);
-        printf("PreÁo: R$%.2f \n", produto[i].preco);
-        printf("PromoÁ„o? %c\n\n", produto[i].promo);
+        printf("C√≥digo: %d \n", produto[i].cod);
+        printf("Descri√ß√£o: %s \n", produto[i].desc);
+        printf("Pre√ßo: R$%.2f \n", produto[i].preco);
+        printf("Promo√ß√£o? %c\n\n", produto[i].promo);
     };
     
     
